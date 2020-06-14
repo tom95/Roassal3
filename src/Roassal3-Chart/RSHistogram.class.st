@@ -25,7 +25,7 @@ RSHistogram >> build [
 			(RSHorizontalTick new
 				numberOfTicks: numberOfBuckets;
 				labelConversion:
-						[ :v | (v - 1) * (maxValueBlock rsValue: values max) / (numberOfBuckets - 1) ];
+						[ :v | ((v - 1) * (maxValueBlock rsValue: values max) / (numberOfBuckets - 1)) asFloat ];
 				doNotUseNiceLabel).
 	^ c
 ]
