@@ -11,6 +11,26 @@ Class {
 }
 
 { #category : #accessing }
+RSHistogram >> build [
+	| data c d |
+	data := self getBuckets collect: [ :l | l size ].
+	c := RSChart new.
+	d := RSBarPlot new.
+	d y: data.
+	c addPlot: d.
+	c addDecoration: (RSYLabelDecoration new title: 'Frequency'; offset: -20 @ 0).
+	c addDecoration: RSVerticalTick new.
+	c
+		addDecoration:
+			(RSHorizontalTick new
+				numberOfTicks: numberOfBuckets;
+				labelConversion:
+						[ :v | (v - 1) * (maxValueBlock rsValue: values max) / (numberOfBuckets - 1) ];
+				doNotUseNiceLabel).
+	^ c
+]
+
+{ #category : #accessing }
 RSHistogram >> getBuckets [
 	| buckets data index |
 	buckets := self getBucketsDelimiters.
@@ -68,7 +88,7 @@ RSHistogram >> numberOfBuckets: nb [
 
 { #category : #accessing }
 RSHistogram >> open [
-
+	^ self build open
 ]
 
 { #category : #accessing }
