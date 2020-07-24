@@ -27,7 +27,7 @@ RSHorizontalTick >> createTickLineFor: aNumber [
 
 { #category : #'accessing - defaults' }
 RSHorizontalTick >> defaultLabelLocation [
-	^ RSLocation new below offset: 0@3
+	^ RSLocation new below
 ]
 
 { #category : #public }
