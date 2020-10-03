@@ -7,7 +7,7 @@ Class {
 	#name : #RSAbstractPopup,
 	#superclass : #RSInteraction,
 	#classVars : [
-		'removeEvents'
+		'RemoveEvents'
 	],
 	#category : #'Roassal3-Interaction-Popup'
 }
@@ -19,15 +19,15 @@ RSAbstractPopup class >> activationEvent [
 
 { #category : #accessing }
 RSAbstractPopup class >> removeEvents [
-	^ removeEvents ifNil: [ 
-		removeEvents := { RSMouseClick. RSMouseEnter. RSMouseLeave. RSMouseDragging } ]
+	^ RemoveEvents ifNil: [ 
+		RemoveEvents := { RSMouseClick. RSMouseEnter. RSMouseLeave. RSMouseDragging } ]
 ]
 
 { #category : #'instance creation' }
 RSAbstractPopup class >> reset [
 	<script: 'self reset'>
 	super reset.
-	removeEvents := nil.
+	RemoveEvents := nil.
 ]
 
 { #category : #hooks }
