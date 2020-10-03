@@ -14,14 +14,14 @@ Class {
 	#name : #RSInteraction,
 	#superclass : #RSObject,
 	#classVars : [
-		'instance'
+		'Instance'
 	],
 	#category : #'Roassal3-Interaction-Core'
 }
 
 { #category : #'instance creation' }
 RSInteraction class >> instance [
-	^ instance ifNil: [ instance := self new ].
+	^ Instance ifNil: [ Instance := self new ].
 ]
 
 { #category : #'instance creation' }
@@ -37,7 +37,7 @@ RSInteraction class >> onShape: aShape [
 { #category : #'instance creation' }
 RSInteraction class >> reset [
 	<script: 'self reset'>
-	instance := nil
+	Instance := nil
 ]
 
 { #category : #'instance creation' }

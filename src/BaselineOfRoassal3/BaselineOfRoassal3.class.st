@@ -51,7 +51,7 @@ BaselineOfRoassal3 >> baseline: spec [
 				examples add: 'Roassal3-Spec-Examples'.
 				tests add: 'Roassal3-Spec-Tests'.
 			] ifAbsent: [ "pharo7"
-				core add: 'Roassal3-Pharo7'; add: 'Announcements'; add: 'Roassal3-Squeak' ].
+				core add: 'Roassal3-Pharo7'; insert: 'Announcements' before: 1; insert: 'Roassal3-Squeak' before: 3 ].
 			spec 
 				group: 'Core' with: core asArray;
 				group: 'Examples'  with: examples asArray;
