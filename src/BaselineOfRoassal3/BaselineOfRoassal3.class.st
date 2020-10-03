@@ -114,7 +114,7 @@ BaselineOfRoassal3 >> roassalCorePackagesIn: spec [
 		package: #'Roassal3-Squeak' with: [ spec requires: #('Announcements') ];
 		package: #'Roassal3-Pharo7';
 		package: #'Roassal3-Builders';
-		package: #'Roassal3-Shapes'
+		package: #'Roassal3-Shapes';
 		package: #'Roassal3-Shapes-Squeak';
 		package: #'Roassal3-Animation';
 		package: #'Roassal3-Chart';
