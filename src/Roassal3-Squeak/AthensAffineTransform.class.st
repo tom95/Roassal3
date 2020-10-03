@@ -36,6 +36,19 @@ AthensAffineTransform >> asMatrix2x3 [
 		yourself
 ]
 
+{ #category : #'vector-transform' }
+AthensAffineTransform >> asMatrixTransform2x3 [
+
+	^ Matrix2x3 new
+		a11: sx;
+		a12: shx;
+		a13: x;
+		a21: shy;
+		a22: sy;
+		a23: y;
+		yourself
+]
+
 { #category : #transformations }
 AthensAffineTransform >> clearTranslation [
 	"reset a translation from matrix, leaving only scale and rotation"
@@ -158,6 +171,18 @@ AthensAffineTransform >> inverted [
 		x: shx * y - (x * sy) / det;
 		y: shy * x - (sx * y) / det;
 		yourself
+]
+
+{ #category : #'vector-transform' }
+AthensAffineTransform >> isIdentity [
+
+	^ sx = 1.0 and: [sy = 1.0 and: [shx = 0 and: [shy = 0 and: [x = 0 and: [y = 0]]]]]
+]
+
+{ #category : #'vector-transform' }
+AthensAffineTransform >> isMatrixTransform2x3 [
+
+	^ true
 ]
 
 { #category : #transformations }

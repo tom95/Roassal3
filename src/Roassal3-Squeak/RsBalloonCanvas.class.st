@@ -59,7 +59,7 @@ RsBalloonCanvas >> restoreAfter: aBlock [
 { #category : #'as yet unclassified' }
 RsBalloonCanvas >> scaleBy: aPoint [
 
-	self transformBy: (Matrix2x3 withScale: aPoint)
+	self transformBy: (MatrixTransform2x3 withScale: aPoint)
 ]
 
 { #category : #'as yet unclassified' }
@@ -94,5 +94,5 @@ RsBalloonCanvas >> transform [
 { #category : #'as yet unclassified' }
 RsBalloonCanvas >> translateBy: aPoint [
 
-	self transformBy: (Matrix2x3 withOffset: aPoint)
+	self transformBy: (MatrixTransform2x3 withOffset: aPoint)
 ]
