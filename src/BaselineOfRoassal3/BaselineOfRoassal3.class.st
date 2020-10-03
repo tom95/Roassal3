@@ -20,9 +20,11 @@ BaselineOfRoassal3 >> baseline: spec [
 			spec package: 'Athens-SVG-PathConverter' with: [
 				spec repository: 'github://pharo-contributions/Athens-SVG/src' ].
 			spec baseline: 'Geometry' with: [ 
-				spec repository: 'github://pharo-contributions/Geometry/src' ].
+				spec repository: 'github://tom95/Geometry:no-unicode/src' ].
 			spec baseline: 'NumericScales'with: [ 
 				spec repository: 'github://ObjectProfile/NumericScales/src' ].
+			spec package: 'Announcements' with: [
+				spec repository: 'http://www.squeaksource.com/AXAnnouncements'].
 			spec 
 				baseline: 'OSSubprocess'
 				with: [ spec repository: 'github://pharo-contributions/OSSubprocess/repository' ].
@@ -49,7 +51,7 @@ BaselineOfRoassal3 >> baseline: spec [
 				examples add: 'Roassal3-Spec-Examples'.
 				tests add: 'Roassal3-Spec-Tests'.
 			] ifAbsent: [ "pharo7"
-				core add: 'Roassal3-Pharo7' ].
+				core add: 'Roassal3-Pharo7'; add: 'Announcements'; add: 'Roassal3-Squeak' ].
 			spec 
 				group: 'Core' with: core asArray;
 				group: 'Examples'  with: examples asArray;
@@ -107,6 +109,7 @@ BaselineOfRoassal3 >> examplePackagesNames [
 BaselineOfRoassal3 >> roassalCorePackagesIn: spec [
 	spec
 		package: #'Roassal3' with: [ spec requires: #('Geometry' 'NumericScales') ];
+		package: #'Roassal3-Squeak';
 		package: #'Roassal3-Pharo7';
 		package: #'Roassal3-Builders';
 		package: #'Roassal3-Shapes';
