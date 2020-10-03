@@ -81,6 +81,7 @@ BaselineOfRoassal3 >> corePackagesNames [
 	'Roassal3'
 	'Roassal3-Builders'
 	'Roassal3-Shapes'
+	'Roassal3-Shapes-Squeak'
 	'Roassal3-Interaction'
 	'Roassal3-Layouts'
 	'Roassal3-Colors'
@@ -113,7 +114,7 @@ BaselineOfRoassal3 >> roassalCorePackagesIn: spec [
 		package: #'Roassal3-Squeak' with: [ spec requires: #('Announcements') ];
 		package: #'Roassal3-Pharo7';
 		package: #'Roassal3-Builders';
-		package: #'Roassal3-Shapes';
+		package: #'Roassal3-Shapes' with: [ spec includes: #('Roassal3-Shapes-Squeak') ];
 		package: #'Roassal3-Animation';
 		package: #'Roassal3-Chart';
 		package: #'Roassal3-Interaction';
