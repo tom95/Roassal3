@@ -1,7 +1,7 @@
 Class {
 	#name : #StandardFonts,
 	#superclass : #Object,
-	#category : #'Roassal3-Squeak'
+	#category : #'Roassal3-Pharo-Squeak'
 }
 
 { #category : #'as yet unclassified' }

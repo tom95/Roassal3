@@ -44,7 +44,7 @@ It is safe to store transformation in temporary variable, as long as canvas is v
 Class {
 	#name : #AthensTransform,
 	#superclass : #Object,
-	#category : #'Roassal3-Squeak'
+	#category : #'Roassal3-Pharo-Squeak'
 }
 
 { #category : #accessing }
