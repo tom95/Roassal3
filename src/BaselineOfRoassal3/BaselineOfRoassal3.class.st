@@ -23,6 +23,8 @@ BaselineOfRoassal3 >> baseline: spec [
 				spec repository: 'github://tom95/Geometry:no-unicode/src' ].
 			spec baseline: 'NumericScales'with: [ 
 				spec repository: 'github://ObjectProfile/NumericScales/src' ].
+			spec package: 'Announcements' with: [
+				spec repository: 'http://www.squeaksource.com/AXAnnouncements'].
 			spec 
 				baseline: 'OSSubprocess'
 				with: [ spec repository: 'github://pharo-contributions/OSSubprocess/repository' ].
@@ -49,7 +51,7 @@ BaselineOfRoassal3 >> baseline: spec [
 				examples add: 'Roassal3-Spec-Examples'.
 				tests add: 'Roassal3-Spec-Tests'.
 			] ifAbsent: [ "pharo7"
-				core add: 'Roassal3-Pharo7'; add: 'Roassal3-Squeak' ].
+				core add: 'Roassal3-Pharo7'; add: 'Announcements'; add: 'Roassal3-Squeak' ].
 			spec 
 				group: 'Core' with: core asArray;
 				group: 'Examples'  with: examples asArray;
