@@ -18,13 +18,13 @@ SubscriptionRegistry >> handleEventClass: eventClass [
 		anySatisfy: [ :sub | sub includesBehavior: eventClass ]
 ]
 
-{ #category : #'*Roassal3-Squeak' }
+{ #category : #'*Roassal3-Squeak-override' }
 SubscriptionRegistry >> handleSubscriberClass: eventClass [
 	"Return true if the receiver has a callback subscripbed for the event class"
 	^ subscriptionsByAnnouncementClasses includesKey: eventClass
 ]
 
-{ #category : #'*Roassal3-Squeak' }
+{ #category : #'*Roassal3-Squeak-override' }
 SubscriptionRegistry >> numberOfSubscriptions [
 	^ subscriptionsByAnnouncementClasses values inject: 0 into: [:sum :list | sum + list size]
 ]
