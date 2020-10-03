@@ -49,7 +49,7 @@ BaselineOfRoassal3 >> baseline: spec [
 				examples add: 'Roassal3-Spec-Examples'.
 				tests add: 'Roassal3-Spec-Tests'.
 			] ifAbsent: [ "pharo7"
-				core add: 'Roassal3-Pharo7' ].
+				core add: 'Roassal3-Pharo7'; add: 'Roassal3-Squeak' ].
 			spec 
 				group: 'Core' with: core asArray;
 				group: 'Examples'  with: examples asArray;
@@ -107,6 +107,7 @@ BaselineOfRoassal3 >> examplePackagesNames [
 BaselineOfRoassal3 >> roassalCorePackagesIn: spec [
 	spec
 		package: #'Roassal3' with: [ spec requires: #('Geometry' 'NumericScales') ];
+		package: #'Roassal3-Squeak';
 		package: #'Roassal3-Pharo7';
 		package: #'Roassal3-Builders';
 		package: #'Roassal3-Shapes';
