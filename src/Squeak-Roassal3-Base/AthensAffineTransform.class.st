@@ -15,7 +15,7 @@ Class {
 		'sy',
 		'y'
 	],
-	#category : #'Roassal3-Pharo-Squeak'
+	#category : #'Squeak-Roassal3-Base'
 }
 
 { #category : #accessing }

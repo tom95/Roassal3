@@ -108,8 +108,8 @@ BaselineOfRoassal3 >> examplePackagesNames [
 { #category : #'package management' }
 BaselineOfRoassal3 >> roassalCorePackagesIn: spec [
 	spec
-		package: #'Roassal3-Pharo-Squeak' with: [ spec requires: #('Announcements') ];
-		package: #'Roassal3' with: [ spec requires: #('Geometry' 'NumericScales' 'Roassal3-Pharo-Squeak') ];
+		package: #'Squeak-Roassal3-Base' with: [ spec requires: #('Announcements') ];
+		package: #'Roassal3' with: [ spec requires: #('Geometry' 'NumericScales' 'Squeak-Roassal3-Base') ];
 		package: #'Roassal3-Squeak' with: [ spec requires: #('Roassal3') ];
 		package: #'Roassal3-Pharo7';
 		package: #'Roassal3-Builders';

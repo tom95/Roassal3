@@ -1,5 +1,5 @@
 Class {
 	#name : #GradientPaint,
 	#superclass : #Object,
-	#category : #'Roassal3-Pharo-Squeak'
+	#category : #'Squeak-Roassal3-Base'
 }
