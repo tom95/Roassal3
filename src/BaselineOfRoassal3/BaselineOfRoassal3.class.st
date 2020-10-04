@@ -79,6 +79,7 @@ BaselineOfRoassal3 >> corePackagesNames [
 	^ #(
 	'Roassal3-Squeak'
 	'Roassal3-Builders'
+	'Roassal3-Shapes'
 	'Roassal3-Interaction'
 	'Roassal3-Layouts'
 	'Roassal3-Colors'
