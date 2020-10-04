@@ -369,7 +369,7 @@ RSAthensMorph >> eventKeyUp: aMorphicEvent [
 	trEvent
 		position: (roassalCanvas camera fromPixelToSpace: trEvent position);
 		keyValue: aMorphicEvent keyValue;
-		keyName: aMorphicEvent key name.
+		keyName: (self class keyNameFor: aMorphicEvent keyValue).
 	trEvent shape announce: trEvent
 ]
 
