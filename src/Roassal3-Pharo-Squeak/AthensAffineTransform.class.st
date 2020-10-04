@@ -24,22 +24,9 @@ AthensAffineTransform >> asFloatTransform [
 ]
 
 { #category : #'vector-transform' }
-AthensAffineTransform >> asMatrix2x3 [
-
-	^ Matrix2x3 new
-		a11: sx;
-		a12: shx;
-		a13: x;
-		a21: shy;
-		a22: sy;
-		a23: y;
-		yourself
-]
-
-{ #category : #'vector-transform' }
 AthensAffineTransform >> asMatrixTransform2x3 [
 
-	^ Matrix2x3 new
+	^ MatrixTransform2x3 new
 		a11: sx;
 		a12: shx;
 		a13: x;
