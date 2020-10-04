@@ -179,8 +179,10 @@ c
 { #category : #'morph creation' }
 RSCanvas >> createMorph [
 	"Create a Morph that contains myself."
-	morph := RSAthensMorph new. 
-	morph renderer: RSAthensRenderer new.
+	Smalltalk at: #AthensCanvas
+		ifPresent: [morph := RSAthensMorph new renderer: RSAthensRenderer new; yourself]
+		ifAbsent: [morph := RSBalloonMorph new renderer: RSBalloonRenderer new; yourself].
+	
 	morph canvas: self.
 	^ morph
 ]
