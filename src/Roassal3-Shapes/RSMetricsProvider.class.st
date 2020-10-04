@@ -14,7 +14,11 @@ Class {
 
 { #category : #accessing }
 RSMetricsProvider class >> default [
-	^ Default ifNil: [ Default := RSCairoMetricsProvider new ].
+	^ Default ifNil: [
+		Default := Smalltalk
+			at: #AthensCairoCanvas
+			ifPresent: [RSCairoMetricsProvider new]
+			ifAbsent: [RSPharoMetricsProvider new]].
 ]
 
 { #category : #accessing }

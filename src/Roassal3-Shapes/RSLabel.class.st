@@ -119,9 +119,13 @@ RSLabel >> computeTextExtents [
 { #category : #private }
 RSLabel >> createFont [
 	| aFont |
-	aFont := LogicalFont 
-		familyName: fontName
-		pointSize: fontSize.
+	aFont := Smalltalk
+		at: #LogicalFont
+		ifPresent: [:cl | cl familyName: fontName pointSize: fontSize]
+		ifAbsent: [
+			self flag: #todo. " choose from the list accroding to fontName and fontSize "
+			TextStyle defaultFont].
+	
 	aFont := aFont emphasized: emphasis emphasisCode.
 	^ aFont
 ]
